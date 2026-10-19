@@ -35,7 +35,7 @@ export function CategoryBlog({ posts }: { posts: BlogPost[] }) {
     <div>
       {topics.length > 1 && (
         <div
-          className="flex flex-wrap justify-center gap-x-8 gap-y-3 mb-14 border-y border-white/15 py-4"
+          className="flex flex-wrap justify-center gap-x-8 gap-y-3 mb-8 sm:mb-10 border-y border-white/15 py-3.5"
           role="tablist"
           aria-label="Filter posts by topic"
         >
@@ -58,7 +58,7 @@ export function CategoryBlog({ posts }: { posts: BlogPost[] }) {
         </div>
       )}
 
-      <div key={active} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-16">
+      <div key={active} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-10 sm:gap-y-12">
         {visible.map((post) => (
           <Link key={post.id} href={`/news/${post.slug}`} data-reveal className="group block">
             <div className="relative aspect-[3/2] w-full overflow-hidden border border-white/15 bg-zinc-950">
@@ -67,7 +67,7 @@ export function CategoryBlog({ posts }: { posts: BlogPost[] }) {
                 alt={post.title}
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 400px"
-                className="object-cover grayscale transition-all duration-[900ms] ease-out group-hover:grayscale-0 group-hover:scale-105"
+                className="object-cover transition-all duration-[900ms] ease-out group-hover:scale-105"
               />
             </div>
 

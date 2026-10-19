@@ -69,7 +69,7 @@ export function HomeEssays({ posts }: { posts: HomePost[] }) {
                 alt={p.title}
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 400px"
-                className="object-cover grayscale transition-all duration-[900ms] ease-out group-hover:grayscale-0 group-hover:scale-105"
+                className="object-cover transition-all duration-[900ms] ease-out group-hover:scale-105"
               />
             </div>
             <div className="pt-6 text-center">

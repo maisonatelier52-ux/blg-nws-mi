@@ -21,6 +21,15 @@ interface DispatchItem {
   aspect: string;
 }
 
+function SectionDivider() {
+  return (
+    <div
+      aria-hidden
+      className="line-draw max-w-[1600px] mx-auto h-px bg-gradient-to-r from-transparent via-white/30 to-transparent"
+    />
+  );
+}
+
 export function EditorialSections() {
   const [activeFilter, setActiveFilter] = useState("all");
 
@@ -316,7 +325,8 @@ export function EditorialSections() {
       {/* ─────────────────────────────────────────────────────────── */}
       {/* SECTION 1: EDITORIAL MANIFESTO & BUREAU DESK                */}
       {/* ─────────────────────────────────────────────────────────── */}
-      <section id="manifesto" className="relative py-8 sm:py-12 px-8 sm:px-16 md:px-24 lg:px-32 xl:px-44 border-t border-white/10">
+      <SectionDivider />
+      <section id="manifesto" className="relative py-8 sm:py-12 px-8 sm:px-16 md:px-24 lg:px-32 xl:px-44">
         <div className="max-w-[1240px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
 
           {/* Left: Manifesto & Numbers */}
@@ -348,7 +358,7 @@ export function EditorialSections() {
                 src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=800"
                 alt="Arthur M. Vance — Chief Economics Correspondent"
                 fill
-                className="object-cover grayscale contrast-110 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+                className="object-cover group-hover:scale-105 transition-all duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
               <div className="absolute bottom-6 inset-x-6">
@@ -366,7 +376,8 @@ export function EditorialSections() {
       {/* ─────────────────────────────────────────────────────────── */}
       {/* SECTION 2: CURATED DISPATCHES (FILTERABLE EDITORIAL GRID)   */}
       {/* ─────────────────────────────────────────────────────────── */}
-      <section id="dispatches" className="relative py-8 sm:py-12 px-8 sm:px-16 md:px-24 lg:px-32 xl:px-44 border-t border-white/10">
+      <SectionDivider />
+      <section id="dispatches" className="relative py-8 sm:py-12 px-8 sm:px-16 md:px-24 lg:px-32 xl:px-44">
         <div className="max-w-[1240px] mx-auto">
 
           {/* Section Header — Minimal Simple */}
@@ -414,7 +425,7 @@ export function EditorialSections() {
                     alt={item.title}
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    className="object-cover grayscale contrast-105 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+                    className="object-cover group-hover:scale-105 transition-all duration-700"
                   />
                 </div>
 
@@ -444,7 +455,8 @@ export function EditorialSections() {
       {/* ─────────────────────────────────────────────────────────── */}
       {/* SECTION 3: IN-DEPTH DOSSIERS & INTELLIGENCE REPORTS         */}
       {/* ─────────────────────────────────────────────────────────── */}
-      <section id="special-reports" className="relative py-8 sm:py-12 px-8 sm:px-16 md:px-24 lg:px-32 xl:px-44 border-t border-white/10">
+      <SectionDivider />
+      <section id="special-reports" className="relative py-8 sm:py-12 px-8 sm:px-16 md:px-24 lg:px-32 xl:px-44">
         <div className="max-w-[1240px] mx-auto">
 
           {/* Section Header — Minimal Simple */}
@@ -474,7 +486,7 @@ export function EditorialSections() {
                   alt={specialReports[0].title}
                   fill
                   sizes="(max-width: 1024px) 100vw, 60vw"
-                  className="object-cover grayscale contrast-110 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+                  className="object-cover group-hover:scale-105 transition-all duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/75 to-black/25 group-hover:from-black/90 transition-colors" />
 
@@ -516,7 +528,7 @@ export function EditorialSections() {
                         alt={item.title}
                         fill
                         sizes="(max-width: 640px) 100vw, 200px"
-                        className="object-cover grayscale contrast-105 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+                        className="object-cover group-hover:scale-105 transition-all duration-700"
                       />
                     </div>
 
@@ -559,7 +571,7 @@ export function EditorialSections() {
                       alt={item.title}
                       fill
                       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                      className="object-cover grayscale contrast-105 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+                      className="object-cover group-hover:scale-105 transition-all duration-700"
                     />
                   </div>
 
@@ -593,7 +605,8 @@ export function EditorialSections() {
       {/* ─────────────────────────────────────────────────────────── */}
       {/* SECTION 4: EDITORIAL PERSPECTIVES & TESTIMONIALS            */}
       {/* ─────────────────────────────────────────────────────────── */}
-      <section id="perspectives" className="relative py-8 sm:py-12 px-8 sm:px-16 md:px-24 lg:px-32 xl:px-44 border-t border-white/10">
+      <SectionDivider />
+      <section id="perspectives" className="relative py-8 sm:py-12 px-8 sm:px-16 md:px-24 lg:px-32 xl:px-44">
         <div className="max-w-[1240px] mx-auto">
 
           {/* Section Header — Minimal Simple */}
@@ -625,7 +638,7 @@ export function EditorialSections() {
                       alt={item.headline}
                       fill
                       sizes="(max-width: 640px) 100vw, 300px"
-                      className="object-cover grayscale contrast-110 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+                      className="object-cover group-hover:scale-105 transition-all duration-700"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t sm:bg-gradient-to-r from-[#121214] via-transparent to-transparent sm:via-[#121214]/40" />
                   </div>
@@ -685,7 +698,7 @@ export function EditorialSections() {
                       alt={item.headline}
                       fill
                       sizes="(max-width: 768px) 100vw, 33vw"
-                      className="object-cover grayscale contrast-105 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+                      className="object-cover group-hover:scale-105 transition-all duration-700"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#121214] via-transparent to-transparent" />
                   </div>
@@ -737,7 +750,8 @@ export function EditorialSections() {
       {/* ─────────────────────────────────────────────────────────── */}
       {/* SECTION 5: 5-GRID CENTERPIECE DOSSIERS (SMOOTH SYMMETRY)    */}
       {/* ─────────────────────────────────────────────────────────── */}
-      <section id="longform" className="relative py-8 sm:py-12 px-8 sm:px-16 md:px-24 lg:px-32 xl:px-44 border-t border-white/10">
+      <SectionDivider />
+      <section id="longform" className="relative py-8 sm:py-12 px-8 sm:px-16 md:px-24 lg:px-32 xl:px-44">
         <div className="max-w-[1240px] mx-auto">
 
           {/* Section Header — Minimal Simple */}
@@ -768,7 +782,7 @@ export function EditorialSections() {
                       alt={item.title}
                       fill
                       sizes="(max-width: 1024px) 50vw, 25vw"
-                      className="object-cover grayscale contrast-105 group-hover:grayscale-0 group-hover:scale-[1.04] transition-all duration-700 ease-out"
+                      className="object-cover group-hover:scale-[1.04] transition-all duration-700 ease-out"
                     />
                   </div>
 
@@ -809,7 +823,7 @@ export function EditorialSections() {
                   alt={fiveDossiers[2].title}
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
-                  className="object-cover grayscale contrast-110 group-hover:grayscale-0 group-hover:scale-[1.03] transition-all duration-1000 ease-out"
+                  className="object-cover group-hover:scale-[1.03] transition-all duration-1000 ease-out"
                 />
 
                 {/* Smooth ambient gradient vignette */}
@@ -857,7 +871,7 @@ export function EditorialSections() {
                       alt={item.title}
                       fill
                       sizes="(max-width: 1024px) 50vw, 25vw"
-                      className="object-cover grayscale contrast-105 group-hover:grayscale-0 group-hover:scale-[1.04] transition-all duration-700 ease-out"
+                      className="object-cover group-hover:scale-[1.04] transition-all duration-700 ease-out"
                     />
                   </div>
 
@@ -891,7 +905,8 @@ export function EditorialSections() {
       </section>
 
       {/* ── Footer (same as category & detail pages) ── */}
-      <footer className="border-t border-white/15 py-10 px-6 sm:px-10 lg:px-14">
+      <SectionDivider />
+      <footer className="py-10 px-6 sm:px-10 lg:px-14">
         <div className="max-w-[1240px] mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-zinc-500">
           <Link href="/" className="group flex flex-col items-start leading-none">
             <span className="font-serif text-[9px] font-semibold tracking-[0.2em] uppercase text-zinc-500">The</span>

@@ -105,7 +105,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
           <div className="mt-8 flex flex-col items-center gap-3">
             {article.author.avatar && (
               <span className="relative w-12 h-12 rounded-full overflow-hidden border border-white/20">
-                <Image src={article.author.avatar} alt={article.author.name} fill sizes="48px" className="object-cover grayscale" />
+                <Image src={article.author.avatar} alt={article.author.name} fill sizes="48px" className="object-cover" />
               </span>
             )}
             <p className="font-display italic text-lg text-zinc-200">By {article.author.name}</p>
@@ -266,7 +266,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
             <p className="text-[11px] uppercase tracking-[0.35em] text-zinc-500">About the writer</p>
             {article.author.avatar && (
               <span className="relative block w-20 h-20 rounded-full overflow-hidden border border-white/20 mx-auto mt-6">
-                <Image src={article.author.avatar} alt={article.author.name} fill sizes="80px" className="object-cover grayscale" />
+                <Image src={article.author.avatar} alt={article.author.name} fill sizes="80px" className="object-cover" />
               </span>
             )}
             <h3 className="font-display text-2xl mt-5 text-white">{article.author.name}</h3>
@@ -313,7 +313,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
                       alt={item.title}
                       fill
                       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                      className="object-cover grayscale transition-all duration-[900ms] ease-out group-hover:grayscale-0 group-hover:scale-105"
+                      className="object-cover transition-all duration-[900ms] ease-out group-hover:scale-105"
                     />
                   </div>
                   <div className="pt-5 text-center">

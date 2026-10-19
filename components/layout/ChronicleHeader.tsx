@@ -36,7 +36,7 @@ export function ChronicleHeader({ currentCategorySlug, isSticky = true, showDivi
           isSticky
             ? "sticky top-0 z-40 bg-black/95 backdrop-blur-md border-b border-white/10 py-3.5 sm:py-4"
             : "relative z-30 bg-black pt-5 pb-0 sm:pt-6"
-        } px-6 sm:px-10 lg:px-14 transition-all duration-300`}
+        } px-8 sm:px-14 lg:px-20 xl:px-24 transition-all duration-300`}
       >
         <div className="max-w-[1600px] mx-auto flex items-center justify-between gap-6">
 

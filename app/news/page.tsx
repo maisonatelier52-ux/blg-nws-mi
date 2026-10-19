@@ -41,7 +41,7 @@ export default function AllArticlesPage() {
                     fill
                     priority
                     sizes="(max-width: 1280px) 100vw, 950px"
-                    className="object-cover grayscale contrast-105 group-hover:grayscale-0 group-hover:scale-[1.03] transition-all duration-700"
+                    className="object-cover group-hover:scale-[1.03] transition-all duration-700"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent" />
                   <div className="absolute top-5 left-5">
@@ -81,7 +81,7 @@ export default function AllArticlesPage() {
                       href={`/news/${leadStory.slug}`}
                       className="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-white hover:text-zinc-300 transition-colors"
                     >
-                      Read Full Dispatch <ArrowRight className="w-3.5 h-3.5" />
+                      Read More <ArrowRight className="w-3.5 h-3.5" />
                     </Link>
                   </div>
                 </div>
@@ -102,7 +102,7 @@ export default function AllArticlesPage() {
                       alt={item.title}
                       fill
                       sizes="(max-width: 640px) 100vw, 33vw"
-                      className="object-cover grayscale contrast-105 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+                      className="object-cover group-hover:scale-105 transition-all duration-700"
                     />
                   </div>
 
